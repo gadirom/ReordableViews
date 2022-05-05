@@ -1,6 +1,6 @@
 import SwiftUI
 
-extension ReordableForEach{
+public extension ReordableForEach{
     
     func onReorder(_ proc: @escaping (Int, Int)->()) -> ReordableForEach{
         var newView = self

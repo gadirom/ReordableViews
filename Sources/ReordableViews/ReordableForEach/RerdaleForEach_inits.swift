@@ -1,6 +1,6 @@
 import SwiftUI
 
-extension ReordableForEach{
+public extension ReordableForEach{
     init(_ elements: Binding<[Element]>,
          id: KeyPath<Element, ID>,
          boundaryBehavior: BoundaryBehavior = .release,
