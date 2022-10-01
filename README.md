@@ -1,3 +1,5 @@
 # ReordableViews
 
-A description of this package.
+<p align="left">
+   <img src="GIFs/VGrid.gif" alt="GIF"/>
+</p>  

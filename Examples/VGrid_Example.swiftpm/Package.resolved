@@ -1,0 +1,32 @@
+{
+  "pins" : [
+    {
+      "identity" : "cgmath",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/gadirom/CGMath",
+      "state" : {
+        "revision" : "a81694771f544745048e8a6d206571600b78ee26",
+        "version" : "1.0.2"
+      }
+    },
+    {
+      "identity" : "containergeometry",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/gadirom/ContainerGeometry",
+      "state" : {
+        "revision" : "4e6a5916da407e48ef4458bb970508527b9e05cc",
+        "version" : "1.0.2"
+      }
+    },
+    {
+      "identity" : "reordableviews",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/gadirom/ReordableViews",
+      "state" : {
+        "branch" : "main",
+        "revision" : "8e3fe868a9f1c78b27490648524501040df884ec"
+      }
+    }
+  ],
+  "version" : 2
+}
