@@ -1,7 +1,7 @@
 import SwiftUI
 import ContainerGeometry
 
-public struct VGrid<Item: Equatable,
+public struct ReordableVGrid<Item: Equatable,
                  ItemView: View,
                  AddButton: View,
                     ID: Hashable>: View {
