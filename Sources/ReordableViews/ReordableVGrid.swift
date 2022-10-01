@@ -32,8 +32,6 @@ public struct ReordableVGrid<Item: Equatable,
         self.orderChanged = orderChanged
     }
     
-    @EnvironmentObject var data: ContainerGeometry
-    
     @Binding var items: [Item]
     
     @Binding var activeItem: Item
@@ -95,7 +93,7 @@ public struct ReordableVGrid<Item: Equatable,
             if !hideAddButton{
                 addButton
             }
-        }
+        }.container()
     }
 }
 
