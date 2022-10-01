@@ -89,7 +89,7 @@ public struct ReordableVGrid<Item: Equatable,
             }
             .moveAnimation(moveAnimation)
             .releaseAnimation(selectAnimation)
-            .reorderDelay(0.3)
+            .reorderDelay(reorderDelay)
             .moveStyle(.simple)
             let hideAddButton = items.count == maxItems
             if !hideAddButton{
