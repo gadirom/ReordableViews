@@ -1,12 +1,34 @@
 import SwiftUI
 import ContainerGeometry
 
+/// Same as SwiftUI's LazyVGrid, but with elements that can be selected and reordable by dragging
 public struct ReordableVGrid<Item: Equatable,
                  ItemView: View,
                  AddButton: View,
-                    ID: Hashable>: View {
+                             ID: Hashable>: View {
+    /// ReordableVGrid Initializer
+    /// - Parameters:
+    ///   - items: binding to array of items
+    ///   - activeItem: binding to an active item
+    ///   - maxItems: maximum items in the grid (used to hide the "Add Button" when the grid is full)
+    ///   - columns: colums - the same as for  SwiftUI's LazyVGrid
+    ///   - alignment: alignment in the grid
+    ///   - spacing: spacing between views
+    ///   - moveAnimation: animation that will be used for reordering views of the grid
+    ///   - selectAnimation: animation that will be used for selecting an active item of the grid
+    ///   - reorderDelay: a delay after a view is hovered above another one before items will be reordered
+    ///   - id: keypath to hashable identifier of the grid item
+    ///   - addButton: a view, with which a user interacts to add new elements (e.g. "+" button). Pass Color.clear if you don't want to use it.
+    ///   - itemView: a view that will appear in the grid for each item in the `items` array.
+    ///   It takes the following arguments:
+    ///    Binding<Item> - binding to the displayed item
+    ///    Bool - indicate if the item is active
+    ///    Bool - indicate if the item is being dragged
+    ///    Bool - indicate if the item is under a dragged item
+    ///    Bool - indicate if the item is onTop of other items
+    ///   - orderChanged: a closure that is called after reordering took place; takes two Int arguments (from, to) - indices of the `items` array. The reordering of the items is performed by the grid. In this closure you do additional actions if needed.
     public init(items: Binding<[Item]>,
-                activeItem: Binding<Item>,
+                activeItem: Binding<Item?>,
                 maxItems: Int,
                 columns: [GridItem],
                 alignment: HorizontalAlignment,
@@ -34,7 +56,7 @@ public struct ReordableVGrid<Item: Equatable,
     
     @Binding var items: [Item]
     
-    @Binding var activeItem: Item
+    @Binding var activeItem: Item?
     
     let maxItems: Int
     
