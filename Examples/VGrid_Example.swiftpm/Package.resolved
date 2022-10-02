@@ -23,8 +23,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/gadirom/ReordableViews",
       "state" : {
-        "branch" : "main",
-        "revision" : "8e3fe868a9f1c78b27490648524501040df884ec"
+        "revision" : "55a019c9ea9b828e4dc6b811ee13bc9847868c3a",
+        "version" : "1.0.3"
       }
     }
   ],

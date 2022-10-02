@@ -35,13 +35,13 @@ let package = Package(
         )
     ],
     dependencies: [
-        .package(url: "https://github.com/gadirom/ReordableViews", .branch("main"))
+        .package(url: "https://github.com/gadirom/ReordableViews", "1.0.3"..<"2.0.0")
     ],
     targets: [
         .executableTarget(
             name: "AppModule",
             dependencies: [
-                .product(name: "ReordableViews", package: "reordableviews")
+                .product(name: "ReordableViews", package: "ReordableViews")
             ],
             path: "."
         )
